@@ -35,9 +35,9 @@ app.get("/", (req, res) => {
 });
 
 // Route for handling POST requests
-app.post("/", async (req, res) => {
-  res.send("POST request received");
-});
+// app.post("/", async (req, res) => {
+//   res.send("POST request received");
+// });
 getData = async (db, collection) => {
   const citiesRef = db.collection(collection);
   const snapshot = await citiesRef.where("id", "==", 1).get();
