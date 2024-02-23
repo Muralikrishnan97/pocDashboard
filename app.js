@@ -3,13 +3,13 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 const app = express();
-const port = process.env.PORT || 3001;
 const { initializeApp } = require("firebase-admin/app");
 const { getFirestore } = require("firebase-admin/firestore");
 
 var serviceAccount = require("./serviceAccountKey.json");
 
 var admin = require("firebase-admin");
+const port = process.env.PORT || 3001;
 
 initializeApp({
   credential: admin.credential.cert(serviceAccount),
